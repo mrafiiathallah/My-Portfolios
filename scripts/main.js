@@ -17,3 +17,16 @@ window.onbeforeunload = () => {
         form.reset();
     }
 };
+
+// back to top button
+document.addEventListener("DOMContentLoaded", function() {
+    var backToTopButton = document.getElementById('back-to-top');
+
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > document.getElementById('services').offsetTop) {
+            backToTopButton.classList.add('show');
+        } else {
+            backToTopButton.classList.remove('show');
+        }
+    });
+});

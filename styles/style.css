@@ -19,6 +19,10 @@
     --itemBorderRadius: 0.7rem;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -446,4 +450,35 @@ footer {
 
 .footer-icons svg:hover {
     fill: #000;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--primaryIconColor);
+    color: white;
+    border-radius: 50%;
+    /* Membuat bentuk lingkaran */
+    padding: 15px;
+    font-size: 24px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+    width: 50px;
+    /* Menambahkan lebar dan tinggi yang sama */
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
 }
